@@ -1,0 +1,131 @@
+╔════════════════════════════════════════════════════════════════════╗
+║         GUIA RÁPIDO - FERRAMENTA DE CONSULTA DE ÓBITO              ║
+║                      Versão 1.0                                    ║
+╚════════════════════════════════════════════════════════════════════╝
+
+INSTALAÇÃO RÁPIDA
+═════════════════════════════════════════════════════════════════════
+
+1. Instalar dependências:
+   $ pip3 install requests beautifulsoup4
+
+2. Tornar executável (opcional):
+   $ chmod +x consulta_obito.py
+
+
+USO BÁSICO
+═════════════════════════════════════════════════════════════════════
+
+Comando simples:
+   $ python3 consulta_obito.py -n "Nome da Pessoa"
+
+Exemplo:
+   $ python3 consulta_obito.py -n "João Silva"
+
+
+EXEMPLOS DE USO
+═════════════════════════════════════════════════════════════════════
+
+1. Busca por nome:
+   $ python3 consulta_obito.py -n "Maria Santos"
+
+2. Busca com CPF:
+   $ python3 consulta_obito.py -n "Pedro Costa" -c "12345678901"
+
+3. Busca com data de nascimento:
+   $ python3 consulta_obito.py -n "Ana Silva" -d "10/05/1960"
+
+4. Busca completa:
+   $ python3 consulta_obito.py -n "Carlos Oliveira" -c "98765432100" -d "20/12/1955"
+
+5. Ver ajuda:
+   $ python3 consulta_obito.py --help
+
+6. Ver versão:
+   $ python3 consulta_obito.py --version
+
+
+INTERPRETAÇÃO DOS RESULTADOS
+═════════════════════════════════════════════════════════════════════
+
+✅ ENCONTRADO:
+   Significa que a pessoa foi encontrada em alguma base de dados
+   de óbitos. Recomenda-se verificar os detalhes nos portais oficiais.
+
+❌ NÃO ENCONTRADO:
+   Significa que nenhum registro de óbito foi encontrado. Porém,
+   ausência de registro não garante que a pessoa esteja viva.
+
+
+OPÇÕES DISPONÍVEIS
+═════════════════════════════════════════════════════════════════════
+
+-n, --nome <nome>           Nome da pessoa (OBRIGATÓRIO)
+-c, --cpf <cpf>             CPF (opcional)
+-d, --data <DD/MM/YYYY>     Data de nascimento (opcional)
+-h, --help                  Exibe ajuda
+-v, --version               Exibe versão
+
+
+FONTES DE DADOS
+═════════════════════════════════════════════════════════════════════
+
+1. CNF Brasil - Cadastro Nacional de Falecidos
+   • 50+ milhões de registros
+   • Cobertura nacional
+
+2. Portal Registro Civil
+   • Base oficial de óbitos
+   • Cobertura nacional
+
+3. SIM DATASUS
+   • Sistema de Informação sobre Mortalidade
+   • Ministério da Saúde
+
+
+PORTAIS OFICIAIS PARA CONSULTA DIRETA
+═════════════════════════════════════════════════════════════════════
+
+• Portal Registro Civil: https://www.registrocivil.org.br/
+• CNF Brasil: https://www.falecidosnobrasil.org.br/
+• SIM DATASUS: http://sim.saude.gov.br/
+
+
+AVISOS IMPORTANTES
+═════════════════════════════════════════════════════════════════════
+
+⚠️  CONFORMIDADE LEGAL:
+   • Respeite a LGPD (Lei Geral de Proteção de Dados)
+   • Use apenas para fins legítimos e autorizados
+   • Não compartilhe dados pessoais sem consentimento
+
+⚠️  LIMITAÇÕES:
+   • Dados podem ter atraso na atualização
+   • Nem todos os óbitos podem estar registrados
+   • Requer conexão com internet
+
+
+TROUBLESHOOTING
+═════════════════════════════════════════════════════════════════════
+
+Erro: "ModuleNotFoundError: No module named 'requests'"
+→ Instale: pip3 install requests beautifulsoup4
+
+Erro: "Erro ao consultar CNF Brasil"
+→ Verifique conexão com internet e tente novamente
+
+Nenhum resultado encontrado
+→ Verifique a grafia do nome ou consulte os portais oficiais
+
+
+CONTATO E SUPORTE
+═════════════════════════════════════════════════════════════════════
+
+CNF Brasil: relacionamento@cnfbrasil.org.br
+Registro Civil: https://www.registrocivil.org.br/
+DATASUS: https://www.gov.br/saude/
+
+
+═════════════════════════════════════════════════════════════════════
+Para mais informações, consulte o arquivo README_CONSULTA_OBITO.md
+═════════════════════════════════════════════════════════════════════
