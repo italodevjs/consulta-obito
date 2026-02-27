@@ -1,12 +1,12 @@
 # 🔍 Consulta de Óbito — Ferramenta CLI
 
-Ferramenta de linha de comando para verificar se uma pessoa está registrada em óbito nas principais bases de dados públicas brasileiras. Desenvolvida para uso em investigações com Kali Linux e sistemas Debian/Ubuntu.
+Ferramenta de linha de comando para verificar se uma pessoa está registrada em óbito nas principais bases de dados públicas brasileiras. Desenvolvida para uso em investigações com Kali Linux.
 
 ---
 
 ## ⚙️ Instalação no Kali Linux
 
-Abra o terminal e execute os comandos abaixo:
+Abra o terminal e execute os comandos abaixo **em ordem**:
 
 ```bash
 # 1. Clone o repositório
@@ -15,12 +15,14 @@ git clone https://github.com/italodevjs/consulta-obito.git
 # 2. Entre na pasta
 cd consulta-obito
 
-# 3. Instale as dependências
-sudo pip3 install requests beautifulsoup4
+# 3. Instale as dependências (método correto para Kali Linux)
+sudo pip3 install requests beautifulsoup4 --break-system-packages
 
 # 4. Torne o script executável
 chmod +x consulta_obito.py
 ```
+
+> **⚠️ Importante:** No Kali Linux mais recente, o `pip3` exige a flag `--break-system-packages`. Isso é normal e seguro para uso neste contexto.
 
 ---
 
@@ -95,7 +97,7 @@ Nenhum registro encontrado. Pode haver atraso na atualização das bases.
 
 ## 🛠️ Requisitos
 
-- Python 3.7 ou superior
+- Python 3.7 ou superior (já incluído no Kali Linux)
 - Conexão com internet
 - Bibliotecas: `requests`, `beautifulsoup4`
 
@@ -117,9 +119,14 @@ Esta ferramenta consulta exclusivamente bases de dados **públicas** brasileiras
 
 ## 🐛 Problemas Comuns
 
+**Erro: `externally-managed-environment`**
+```bash
+sudo pip3 install requests beautifulsoup4 --break-system-packages
+```
+
 **Erro: `ModuleNotFoundError: No module named 'requests'`**
 ```bash
-sudo pip3 install requests beautifulsoup4
+sudo pip3 install requests beautifulsoup4 --break-system-packages
 ```
 
 **Nenhum resultado encontrado:**
