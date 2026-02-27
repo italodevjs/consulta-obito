@@ -10,7 +10,7 @@ Abra o terminal e execute os comandos abaixo:
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/caetanoitalo59-boop/consulta-obito.git
+git clone https://github.com/italodevjs/consulta-obito.git
 
 # 2. Entre na pasta
 cd consulta-obito
